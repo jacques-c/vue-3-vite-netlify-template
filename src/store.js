@@ -28,7 +28,7 @@ export const store = reactive({
   getData() {
     this.loading = true;
     fetch(
-      `qs.json`
+      `https://opentdb.com/api.php?category=${this.options.category}&amount=10`
     )
       .then((res) => res.json())
       .then((res) => {
